@@ -5,18 +5,19 @@ import { AddIcon } from '@chakra-ui/icons';
 
 
 export default function Nav() {
-    const styles = {
-      button: {
-        fontSize: '32px',
-      },  
-    }
-
     return (
-    <>
-    <Box p={4}>
-        <Button aria-label='About Me' leftIcon={<AddIcon/>}  styles={styles.button}>About Me</Button>
-    </Box>
-    </>
-    )
-}
+        <>
+          <Box p={4}>
+            <Button
+              fontSize={"1.1rem"}
+              bg={"brand.300"}
+              aria-label="About Me"
+              leftIcon={<AddIcon />}
+            >
+              About Me
+            </Button>
+          </Box>
+        </>
+      );
+    }
 
