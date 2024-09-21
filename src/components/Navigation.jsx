@@ -1,31 +1,22 @@
+import { Box, Button,  } from '@chakra-ui/react';
+import { AddIcon } from '@chakra-ui/icons';
 
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    // BreadcrumbSeparator,
-  } from '@chakra-ui/react'
 
-const Nav {
-    <box>
-    <Breadcrumb>
-        <BreadcrumbItem>
-            <BreadcrumbLink ref='../pages/AboutMe'>About Me</BreadcrumbLink>
-        </BreadcrumbItem>
 
-        {/* <BreadcrumbItem>
-            <BreadcrumbLink ref='../pages/Portfolio'>Portfolio</BreadcrumbLink>
-        </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink ref='../pages/Resume'>Resume</BreadcrumbLink>
-        </BreadcrumbItem>
+export default function Nav() {
+    const styles = {
+      button: {
+        fontSize: '32px',
+      },  
+    }
 
-        <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink ref='../pages/Contact'>Contact</BreadcrumbLink>
-        </BreadcrumbItem>
-    </Breadcrumb> */}
-    </box>
+    return (
+    <>
+    <Box p={4}>
+        <Button aria-label='About Me' leftIcon={<AddIcon/>}  styles={styles.button}>About Me</Button>
+    </Box>
+    </>
+    )
 }
 
-export default Nav
