@@ -7,24 +7,25 @@ import {
   } from '@chakra-ui/react'
 
 const Nav {
-<Breadcrumb>
-  <BreadcrumbItem>
-    <BreadcrumbLink href='#'>About Me</BreadcrumbLink>
-  </BreadcrumbItem>
+    <box>
+    <Breadcrumb>
+        <BreadcrumbItem>
+            <BreadcrumbLink ref='../pages/AboutMe'>About Me</BreadcrumbLink>
+        </BreadcrumbItem>
 
-  <BreadcrumbItem>
-    <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
-  </BreadcrumbItem>
+        {/* <BreadcrumbItem>
+            <BreadcrumbLink ref='../pages/Portfolio'>Portfolio</BreadcrumbLink>
+        </BreadcrumbItem>
 
-  <BreadcrumbItem isCurrentPage>
-    <BreadcrumbLink href='#'>Portfolio</BreadcrumbLink>
-  </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink ref='../pages/Resume'>Resume</BreadcrumbLink>
+        </BreadcrumbItem>
 
-  <BreadcrumbItem isCurrentPage>
-    <BreadcrumbLink href='#'>Resume</BreadcrumbLink>
-  </BreadcrumbItem>
-
-</Breadcrumb>
+        <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink ref='../pages/Contact'>Contact</BreadcrumbLink>
+        </BreadcrumbItem>
+    </Breadcrumb> */}
+    </box>
 }
 
 export default Nav
