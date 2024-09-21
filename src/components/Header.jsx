@@ -11,8 +11,10 @@ export default function Header() {
 
     return (
         <>
-        <h1>what do I do</h1>
+        <Box bg='brand.800' w='100%' p={4} color='white'>
+        <h1>header note</h1>
         <Nav></Nav>
+        </ Box>
         </>
     )
 }
