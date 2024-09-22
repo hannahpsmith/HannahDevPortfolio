@@ -1,34 +1,48 @@
-import { Box, Button,  } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Box, Flex, Link, Menu, MenuButton, MenuList, MenuItem, Button, textDecoration, border } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
-import { Link, useLocation } from 'react-router-dom';
 
 
 export default function Nav() {
-    const location = useLocation();
+  const buttonStyles = {
+    fontSize: "1.1rem",
+    bg: "brand.200",
+    color: "brand.800",
+    _hover: {
+      bg: "brand.50",
+      color: "brand.300",
+    },
+    _active: {
+      borderColor: "brand.300",
+      border: "2px",
+    },
 
+  }
     return (
-          <Box p={4}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+      <Flex as="nav" className="navbar-links" gap={5} position="relative" bottom={1} 
+                          direction={['column', 'row']}
+                          justify={['center', 'flex-end']}
+                          align='left'
+                          w='100%'
+                          pt={[4,0]}
+                          >
+        <Button as={RouterLink} to="/about" {...buttonStyles} aria-label={"About Me"}>
+          About Me
+        </Button>
+        <Button as={RouterLink} to="/portfolio" {...buttonStyles} aria-label={"Button"}>
+          Portfolio
+        </Button>
+        <Button as={RouterLink} to="/resume" {...buttonStyles} aria-label={"Resume"}>
+          Resume
+        </Button>
+        <Button as={RouterLink} to="/contact" {...buttonStyles} aria-label={"Contact"}>
+          Contact
+        </Button>
+        </Flex>
 
-            <Button
-                fontSize={"1.1rem"}
-                bg={location.pathname === "/" ? "#e63946" : "brand.200"}
-                aria-label="About Me"
-                color={location.pathname === "/" ? "#f1faee" : "brand.800"}
-                _hover={{
-                background: "#f1faee",
-                color: "#e63946",
-              }}
-              _active={{
-                borderColor: '#e63946',
-              }}
-                leftIcon={<AddIcon />}
-            >
-              About Me
-            </Button>
-            </Link>
-          </Box>
+
+
+
 
       );
     }
-

@@ -1,18 +1,16 @@
-// import '../styles/Header.css';
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, Image } from '@chakra-ui/react';
 import Nav from './Navigation';
+import HS from '../assets/name-white.png'
 
 export default function Header() {
-    const styles = {
-        customHeader: {
-            fontFamily: 'sans-serif',
-        }
-    };
+
 
     return (
         <>
         <Box bg='brand.800' w='100%' p={4} color='white'>
-        <h1>header note</h1>
+        <Flex justify={['center', 'space-between']}>
+        <Image src={HS} height={20} minW={265} obectFit='cover' ></Image>
+        </Flex>
         <Nav></Nav>
         </ Box>
         </>

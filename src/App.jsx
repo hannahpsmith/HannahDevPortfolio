@@ -1,13 +1,14 @@
-import { Box } from '@chakra-ui/react';
-import Header from './components/Header';
-// // import Footer from './components/Footer';
-// import Nav from './components/Navigation'
+import { ChakraProvider, Box } from '@chakra-ui/react';
+import theme from './utils/theme';
+import Layout from './components/Layout';
+import { Outlet } from 'react-router-dom';
 
 export default function App() {
-
   return (
-    <Box>
-    <Header></Header>
-    </Box>
-  )
+    <ChakraProvider theme={theme}>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </ChakraProvider>
+  );
 }

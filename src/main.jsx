@@ -1,15 +1,43 @@
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import * as React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import * as ReactDOM from 'react-dom/client'
+import theme from './utils/theme';
+
 import App from './App';
-import theme from "./theme";
+import AboutMe from './pages/AboutMe';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: 'about',
+        element: <AboutMe />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
+      },
+      {
+        path: 'portfolio',
+        element: <Portfolio />
+      },
+      {
+        path: 'resume',
+        element: <Resume />
+      },
+    ],
+  },
+]);
 
-const rootElement = document.getElementById('root')
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <ChakraProvider>
+    <RouterProvider router={router} />
+  </ChakraProvider>
+);
