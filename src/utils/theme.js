@@ -10,6 +10,16 @@ const theme = extendTheme({
             800: "#1d3557", //dark blue
         }
     },
-})
+    styles: {
+        global: {
+          body: {
+            bg: 'brand.500', 
+            color: 'brand.800',
+          },
+        },
+      },
+
+    
+});
 
 export default theme

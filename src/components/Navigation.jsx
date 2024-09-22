@@ -19,12 +19,13 @@ export default function Nav() {
 
   }
     return (
-      <Flex as="nav" className="navbar-links" gap={5} position="relative" bottom={1} 
+      <Flex as="nav" className="navbar-links" gap={5} position="relative" 
                           direction={['column', 'row']}
                           justify={['center', 'flex-end']}
                           align='left'
                           w='100%'
                           pt={[4,0]}
+                          pr={[0,4]}
                           >
         <Button as={RouterLink} to="/about" {...buttonStyles} aria-label={"About Me"}>
           About Me

@@ -1,10 +1,10 @@
 import React from 'react';
+import { Box } from '@chakra-ui/react';
 
 export default function Contact() {
   return (
-    <section>
-      <h1>Contact</h1>
-      <p>contact</p>
-    </section>
+    <Box>
+        <h1>this is a test box</h1>
+    </Box>
   );
 }
