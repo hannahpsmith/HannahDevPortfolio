@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-// import background from '../assets/background.jpg';
+import background from '../assets/background.jpg';
 
 const theme = extendTheme({
     colors: {
@@ -12,21 +12,21 @@ const theme = extendTheme({
         }
     },
     styles: {
-        global: {
-          body: {
+      global: (props) => ({
+        'html, body': {
             bg: 'brand.500', 
             color: 'brand.800',
 
-    //     //     backgroundImage: `url(${background})`,
-    //     //     backgroundSize: 'cover',
-    //     //     backgroundRepeat: 'no-repeat',
-    //     //     backgroundPosition: 'center',
-    //     //     height: '100vh',
-    //     //     width: '100vw',
-    //     //     overflow: 'hidden',
+             backgroundImage: `url(${background})`,
+             backgroundSize: 'cover',
+             backgroundRepeat: 'no-repeat',
+             backgroundPosition: 'center',
+             height: '100vh',
+             width: '100vw',
+             overflowX: 'hidden',
 
           },
-        },
+        }),
       },
 
     

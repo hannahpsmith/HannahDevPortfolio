@@ -6,6 +6,10 @@ export default function Footer() {
     const footerStyles = {
         bg: "brand.800",
         color: "brand.300",
+        py: "4",
+        mt: "auto",
+        width: "100%",
+        bottom: "0",
     };
     const linkStyles = {
         color: "brand.300",
@@ -14,7 +18,7 @@ export default function Footer() {
           },
     };
 return (
-    <Box p={4} textAlign="center" {...footerStyles}>
+    <Box {...footerStyles}>
       <Flex justify="center" gap={6}>
         <Link href="https://www.linkedin.com/in/hannahsmithballroom/" isExternal {...linkStyles}>
           <Icon as={FaLinkedin} boxSize={6}/>

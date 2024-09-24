@@ -11,7 +11,7 @@ export default function AboutMe() {
               boxSize="200px" 
               borderRadius="full" 
               boxShadow="lg"
-              objectFit="cover"
+              objectfit="cover"
               mr={4}
               mb={6}
             />

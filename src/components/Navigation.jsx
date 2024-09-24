@@ -27,7 +27,7 @@ export default function Nav() {
                           pt={[4,0]}
                           pr={[0,4]}
                           >
-        <Button as={RouterLink} to="/about" {...buttonStyles} aria-label={"About Me"}>
+        <Button as={RouterLink} to="/" {...buttonStyles} aria-label={"About Me"}>
           About Me
         </Button>
         <Button as={RouterLink} to="/portfolio" {...buttonStyles} aria-label={"Button"}>

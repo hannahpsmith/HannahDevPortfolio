@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 import Nav from './Navigation';
 import HS from '../assets/name-white.png'
 
@@ -20,7 +20,7 @@ export default function Header() {
           bgGradient="linear(to bottom, rgba(29, 53, 87, 1), rgba(0, 0, 0, 0))"
         />
         <Flex justify={['center', 'space-between']}>
-            <Image src={HS} height={20} minW={265} obectFit='cover' ></Image>
+            <Image src={HS} height={20} minW={265} obectfit='cover' ></Image>
         </Flex>
         <Nav></Nav>
         </Box>
