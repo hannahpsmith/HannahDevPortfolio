@@ -14,9 +14,7 @@ const theme = extendTheme({
     styles: {
       global: (props) => ({
         'html, body': {
-            bg: 'brand.500', 
-            color: 'brand.800',
-
+          
              backgroundImage: `url(${background})`,
              backgroundSize: 'cover',
              backgroundRepeat: 'no-repeat',
