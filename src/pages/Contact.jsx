@@ -39,17 +39,13 @@ const Contact = () => {
   };
 
   return (
-        <Box
-          bg="brand.800"
-          color="brand.50"
-          borderRadius="lg"
-          m={{ sm: 4, md: 5, lg: 6 }}
-          p={{ sm: 5, md: 5, lg: 6 }}
-          maxW='800px' 
-          mx='auto'>
-          <Heading align="center">Contact</Heading>
+    <Flex justifyContent="center" alignItems="center"> 
+    <Box bg="brand.800" color="brand.50" borderRadius="md" boxShadow="lg" m={{ sm: 4, md: 5, lg: 6 }}
+    p={{ sm: 5, md: 5, lg: 6 }} maxW='800px' mx='auto'>
           <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+          <Heading align="center" pb={{ sm: 3, md: 5, lg: 6 }}>Contact</Heading>
+
+            <Wrap spacing={{ sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
@@ -61,9 +57,9 @@ const Contact = () => {
                         height="48px"
                         width="100%"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                        color="brand.50"
+                        _hover={{ border: '4px solid #a8dadc' }}
+                        leftIcon={<MdPhone color="#e63946" size="20px" />}>
                         +1 253-797-6890
                       </Button>
                       <Button
@@ -73,9 +69,9 @@ const Contact = () => {
                         height="48px"
                         width="100%"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                        color="brand.50"
+                        _hover={{ border: '4px solid #a8dadc' }}
+                        leftIcon={<MdEmail color="#e63946" size="20px" />}>
                         hannahpsmith94@gmail.com
                       </Button>
                       <Button
@@ -86,9 +82,9 @@ const Contact = () => {
                         height="48px"
                         width="100%"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                        color="brand.50"
+                        _hover={{ border: '4px solid #a8dadc' }}
+                        leftIcon={<MdLocationOn color="#e63946" size="20px" />}>
                         Salt Lake City, UT
                       </Button>
                     </VStack>
@@ -129,7 +125,7 @@ const Contact = () => {
                             />
                           </FormControl>
                           <FormControl id="send" float="right">
-                            <Button variant="solid" bg="#0D74FF" color="white" type="submit" _hover={{}}>
+                            <Button variant="solid" bg="brand.300" color="brand.50" type="submit" _hover={{}}>
                               Send Message
                             </Button>
                           </FormControl>
@@ -142,16 +138,7 @@ const Contact = () => {
             </Wrap>
           </Box>
         </Box>
-
-    // <form ref={form} onSubmit={sendEmail}>
-    //   <label>Name</label>
-    //   <input type="text" name="user_name" />
-    //   <label>Email</label>
-    //   <input type="email" name="user_email" />
-    //   <label>Message</label>
-    //   <textarea name="message" />
-    //   <input type="submit" value="Send" />
-    // </form>
+      </Flex>
   );
 };
 
