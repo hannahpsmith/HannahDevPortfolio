@@ -96,7 +96,7 @@ const Contact = () => {
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
                         <form ref={form} onSubmit={sendEmail}>
-                          <FormControl id="name">
+                          <FormControl id="name" isRequired>
                             <FormLabel>Your Name</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
@@ -105,7 +105,7 @@ const Contact = () => {
                               <Input type="text" name="user_name" size="md" value={formData.user_name} onChange={handleChange} />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="email">
+                          <FormControl id="email" isRequired>
                             <FormLabel>Email</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
@@ -114,7 +114,7 @@ const Contact = () => {
                               <Input type="email" name="user_email" size="md" value={formData.user_email} onChange={handleChange} />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="message">
+                          <FormControl id="message" isRequired>
                             <FormLabel>Message</FormLabel>
                             <Textarea
                               name="message"
